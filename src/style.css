@@ -1,0 +1,154 @@
+html{
+  background-color: #0a2341;
+  overflow: hidden;
+}
+
+.original{
+  margin: auto 5px;
+  width:100%;
+  max-width: 130vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* wrapper and anti-wrapper */
+
+.wr{
+  transition: transform 2s;
+  transform: rotate(-90deg);
+}
+.antiwr{
+  transition: transform 2s;
+  transform: rotate(0deg);
+}
+
+.wrap{
+  transition: transform 2s;
+  transform: scale(2);
+}
+
+.antiwrap{
+  transition: transform 2s;
+  transform: scale(1);
+}  
+  
+.wrapwrap{
+  transition: transform 2s;
+  transform: translate(0, -50%);
+}
+
+.antiwrapwrap{
+  transition: transform 2s;
+  transform: translate(0, 25%);
+}
+
+.mid{
+  position: absolute;
+  /* text-align: center; */
+  height: 100%;
+  width: 100%;
+  transform: translate(0, 25%);
+}
+
+/* click to continue component */
+
+.blink_me {
+  animation: blinker 2s linear infinite;
+  font-size: 40px;
+  color:red;
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.op0{
+    opacity: 0;
+}
+
+
+/* back button */
+
+.floater{
+  position: absolute;
+  z-index: 3
+}
+
+/* selector */
+.selector{
+  color: white;
+  font-size:1.5em;
+}
+
+.select{
+  font-size:0.75em;
+}
+
+
+/* profile */
+.prof{
+  right: 2.5%;
+  top: 2.5%;
+}
+
+.prof-img{
+  float: right;
+  width: 12.5%;
+  height: 100%;
+}
+
+.prof-discrip{
+  float: right;
+  clear: both;
+  width: 12.5%;
+  background: #aaaaaa;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.circle {
+	width: min(8vh,8vh);
+	aspect-ratio: 1/1;
+	background: #f1c544;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.circle-text {
+	right: min(2vh, 2vw);
+	font-size: min(4vh, 4vw);
+	position: absolute;
+	top: min(1.5vh, 1.5vw);
+}
+
+#back-button{
+  top:1rem;
+  left:1rem;
+}
+
+.corner-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  transform: translateZ(0px);
+  border: 3px solid #eee;
+  z-index:99;
+}
+
+.close-button{
+  position: absolute;
+  z-index: 3;
+  top:0.5rem;
+  right:0.5rem;
+  font-size:2em;
+  text-decoration: none;
+}
